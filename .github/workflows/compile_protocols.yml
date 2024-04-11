@@ -1,0 +1,34 @@
+name: Compile Protocols
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  compile:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Compile Protocols
+      run: |
+        # Create the "protocols" directory if it doesn't exist
+        mkdir -p protocols
+        
+        # Compile the "full" protocol
+        cat methods/A.md methods/B.md methods/C.md > protocols/full.md
+        
+        # Compile the "fast" protocol  
+        cat methods/D.md methods/F.md > protocols/fast.md
+        
+        # Compile the "import" protocol
+        cat methods/G.md methods/H.md methods/K.md > protocols/import.md
+        
+        # Add the compiled protocols to the Git repo
+        git add protocols/
+        git commit -m "Compile protocols"
+        git push
