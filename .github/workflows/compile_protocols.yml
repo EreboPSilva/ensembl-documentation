@@ -13,6 +13,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GH_TOKEN }}
 
     - name: Configure Git User
       run: |
@@ -83,6 +85,8 @@ jobs:
           methods/finalization.md \
           > protocols/boa.md
 
+    - name: Sync!
+      run: |
         # Add the compiled protocols to the Git repo
         git add protocols/
         git commit -m "Compile protocols"
