@@ -19,15 +19,65 @@ jobs:
         # Create the "protocols" directory if it doesn't exist
         mkdir -p protocols
         
-        # Compile the "full" protocol
-        cat methods/A.md methods/B.md methods/C.md > protocols/full.md
+        # Compile the "map" protocol
+        cat \
+          methods/genome_preparation.md \
+          methods/repeat_elements.md \
+          methods/simple_features.md \
+          methods/projection.md \
+          methods/homology.md \
+          methods/transcriptomic.md \
+          methods/finalization.md \
+          methods/pseudogenes.md \
+          > protocols/map.md
         
-        # Compile the "fast" protocol  
-        cat methods/D.md methods/F.md > protocols/fast.md
-        
-        # Compile the "import" protocol
-        cat methods/G.md methods/H.md methods/K.md > protocols/import.md
-        
+         # Compile the "map_np" protocol
+         cat \
+          methods/genome_preparation.md \
+          methods/repeat_elements.md \
+          methods/simple_features.md \
+          methods/homology.md \
+          methods/transcriptomic.md \
+          methods/finalization.md \
+          methods/pseudogenes.md \
+          > protocols/map_np.md
+            
+        # Compile the "map_rm" protocol
+        cat \
+          methods/genome_preparation.md \
+          methods/repeat_elements.md \
+          methods/repeat_modeler.md \
+          methods/simple_features.md \
+          methods/projection.md \
+          methods/homology.md \
+          methods/transcriptomic.md \
+          methods/finalization.md \
+          methods/pseudogenes.md \
+          > protocols/map_rm.md
+
+        # Compile the "rap" protocol
+        cat \
+          methods/genome_preparation.md \
+          methods/repeat_elements.md \
+          methods/repeat_modeler.md \
+          methods/simple_features.md \
+          methods/projection.md \
+          methods/homology.md \
+          methods/transcriptomic.md \
+          methods/finalization.md \
+          > protocols/rap.md
+
+        # Compile the "boa" protocol
+        cat \
+          methods/genome_preparation.md \
+          methods/repeat_elements.md \
+          methods/repeat_modeler.md \
+          methods/simple_features.md \
+          methods/projection.md \
+          methods/homology.md \
+          methods/finalization.md \
+          > protocols/boa.md
+
         # Add the compiled protocols to the Git repo
         git add protocols/
         git commit -m "Compile protocols"
