@@ -12,7 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+
+    - name: Configure Git User
+      run: |
+        git config --global user.name 'EreboPSilva'
+        git config --global user.email 'ereboperezsilva@ebi.ac.uk'
     
     - name: Compile Protocols
       run: |
