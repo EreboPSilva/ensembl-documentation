@@ -38,8 +38,8 @@ jobs:
           methods/pseudogenes.md \
           > protocols/map.md
         
-         # Compile the "map_np" protocol
-         cat \
+        # Compile the "map_np" protocol
+        cat \
           methods/genome_preparation.md \
           methods/repeat_elements.md \
           methods/simple_features.md \
@@ -48,7 +48,7 @@ jobs:
           methods/finalization.md \
           methods/pseudogenes.md \
           > protocols/map_np.md
-            
+        
         # Compile the "map_rm" protocol
         cat \
           methods/genome_preparation.md \
@@ -65,8 +65,7 @@ jobs:
         # Compile the "rap" protocol
         cat \
           methods/genome_preparation.md \
-          methods/repeat_elements.md \
-          methods/repeat_modeler.md \
+          methods/repeat_elements_r.md \
           methods/simple_features.md \
           methods/projection.md \
           methods/homology.md \
