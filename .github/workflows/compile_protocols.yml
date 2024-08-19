@@ -32,7 +32,7 @@ jobs:
           methods/repeat_finding_RM.md \
           methods/simple_features.md \
 	  methods/protein_coding.md \
-	  methods/transcriptomic.md \	
+	  methods/transcriptomic.md \
           methods/homology.md \
           methods/projection.md \
 	  methods/pc_finalisation.md \
@@ -44,6 +44,7 @@ jobs:
           > protocols/verts.md
         
         # Compile the "non_verts" protocol
+	cat \
        	  methods/genome_preparation.md \
 	  methods/repeat_finding_RED.md \
           methods/simple_features.md \
@@ -58,10 +59,11 @@ jobs:
           > protocols/non_verts.md
         
         # Compile the "braker" protocol
+	cat \
        	  methods/genome_preparation.md \
 	  methods/repeat_finding_RM.md \
           methods/simple_features.md \
-	  methods/braker.md
+	  methods/braker.md \
           > protocols/braker.md
 
     - name: Sync!
