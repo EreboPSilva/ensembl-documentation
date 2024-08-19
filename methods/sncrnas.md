@@ -1,0 +1,3 @@
+### Identifying Small Non-coding RNAs
+
+Small structured non-coding genes from [RFAM](https://rfam.org/) ([Nawrocki, E.P., et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25392425/)) and [miRBase](https://www.mirbase.org/) ([Griffiths-Jones, S., *et al.*, 2006](https://pubmed.ncbi.nlm.nih.gov/16381832/)) are analyzed using [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) ([Altschul, S.F., et al.,1990](https://pubmed.ncbi.nlm.nih.gov/2231712/)), and models are generated using the Infernal software suite ([Nawrocki, E.P. and S.R. Eddy, 2013](https://academic.oup.com/bioinformatics/article/29/22/2933/316439)).

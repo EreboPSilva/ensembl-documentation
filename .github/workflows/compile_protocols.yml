@@ -26,63 +26,43 @@ jobs:
         # Create the "protocols" directory if it doesn't exist
         mkdir -p protocols
         
-        # Compile the "map" protocol
+        # Compile the "verts" protocol
         cat \
           methods/genome_preparation.md \
-          methods/repeat_elements.md \
+          methods/repeat_finding_RM.md \
           methods/simple_features.md \
-          methods/projection.md \
+	  methods/protein_coding.md \
+	  methods/transcriptomic.md \	
           methods/homology.md \
-          methods/transcriptomic.md \
-          methods/finalization.md \
+          methods/projection.md \
+	  methods/pc_finalisation.md \
+          methods/finalisation.md \
+	  methods/sncrnas.md \
           methods/pseudogenes.md \
-          > protocols/map.md
+	  methods/lncrnas.md \
+	  methods/appendix \
+          > protocols/verts.md
         
-        # Compile the "map_np" protocol
-        cat \
-          methods/genome_preparation.md \
-          methods/repeat_elements.md \
+        # Compile the "non_verts" protocol
+       	  methods/genome_preparation.md \
+	  methods/repeat_finding_RED.md \
           methods/simple_features.md \
-          methods/homology.md \
+          methods/protein_coding.md \
           methods/transcriptomic.md \
-          methods/finalization.md \
-          methods/pseudogenes.md \
-          > protocols/map_np.md
+          methods/homology.md \
+          methods/pc_finalisation.md \
+          methods/finalisation.md \
+          methods/sncrnas.md \
+          methods/lncrnas.md \
+          methods/appendix \
+          > protocols/non_verts.md
         
-        # Compile the "map_rm" protocol
-        cat \
-          methods/genome_preparation.md \
-          methods/repeat_elements.md \
-          methods/repeat_modeler.md \
+        # Compile the "braker" protocol
+       	  methods/genome_preparation.md \
+	  methods/repeat_finding_RM.md \
           methods/simple_features.md \
-          methods/projection.md \
-          methods/homology.md \
-          methods/transcriptomic.md \
-          methods/finalization.md \
-          methods/pseudogenes.md \
-          > protocols/map_rm.md
-
-        # Compile the "rap" protocol
-        cat \
-          methods/genome_preparation.md \
-          methods/repeat_elements_r.md \
-          methods/simple_features.md \
-          methods/projection.md \
-          methods/homology.md \
-          methods/transcriptomic.md \
-          methods/finalization.md \
-          > protocols/rap.md
-
-        # Compile the "boa" protocol
-        cat \
-          methods/genome_preparation.md \
-          methods/repeat_elements.md \
-          methods/repeat_modeler.md \
-          methods/simple_features.md \
-          methods/projection.md \
-          methods/homology.md \
-          methods/finalization.md \
-          > protocols/boa.md
+	  methods/braker.md
+          > protocols/braker.md
 
     - name: Sync!
       run: |
