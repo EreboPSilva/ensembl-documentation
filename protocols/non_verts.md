@@ -10,23 +10,23 @@ The most important aspect of this phase is identifying repeat features as soft m
 After the genomic sequence has been loaded into a database, it is screened for sequence patterns, including repeats using Red ([Girgis, H.Z., 2015](https://doi.org/10.1186/s12859-015-0654-5)), dustmasker ([Morgulis, A., *et al.*, 2006](https://doi.org/10.1089/cmb.2006.13.1028)) and TRF ([Benson, G., 1999](https://doi.org/10.1093/nar/27.2.573)).
 ### Low Complexity Feature Prediction
 
-Transcription start sites are predicted using Eponine–scan [6], CpG islands longer than 400 bases are predicted using CpG ([Larsen, F., *et al*, 1992](https://doi.org/10.1016/0888-7543(92)90024-m)) and tRNAs are predicted using tRNAscan-SE [Chan, P.P., *et al*, 2019](https://doi.org/10.1007/978-1-4939-9173-0_1). The results of Eponine-scan, CpG, and tRNAscan are for display purposes only; they are not used in the gene annotation process. 
+Transcription start sites are predicted using Eponine–scan [6], CpG islands longer than 400 bases are predicted using CpG ([Larsen, F., *et al*, 1992](https://doi.org/10.1016/0888-7543(92)90024-m)) and tRNAs are predicted using tRNAscan-SE [Chan, P.P., *et al*, 2019](https://doi.org/10.1007/978-1-4939-9173-0_1). The results of Eponine-scan, CpG, and tRNAscan are for display purposes only; they are not used in the gene annotation process.
 ## Generating Automatic, Evidence-based Protein-coding Gene Models
 
-Genome annotation is generated primarily through alignment of publicly available transcriptomic data to the genome. Gaps in the annotation are filled via protein-to-genome alignments of a select set of proteins. The data and techniques employed to generate gene models are outlined here. 
+Genome annotation is generated primarily through alignment of publicly available transcriptomic data to the genome. Gaps in the annotation are filled via protein-to-genome alignments of a select set of proteins. The data and techniques employed to generate gene models are outlined here.
 ### Model Generation Through Alignment of Transcriptomic Data to the Genome
 
 #### Aligning RNASeq Data
-Where available, RNA-seq data are downloaded from [ENA](https://www.ebi.ac.uk/ena/) and utilised for annotation. The obtained reads are aligned to the genome using STAR ([Dobin A., *et al*, 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537?login=true)) and models assembled using Scallop ([Shao M., Kingsford C., 2017](https://www.nature.com/articles/nbt.4020)). 
+Where available, RNA-seq data are downloaded from [ENA](https://www.ebi.ac.uk/ena/) and utilised for annotation. The obtained reads are aligned to the genome using STAR ([Dobin A., *et al*, 2013](https://doi.org/10.1093/bioinformatics/bts635)) and models assembled using Scallop ([Shao M., Kingsford C., 2017](https://doi.org/10.1038/nbt.4020)).
 
 #### Aligning Long-read Transcriptomic Data
-Where available, long-read transcriptomic data (PacBio IsoSeq or Oxford Nanopore) are downloaded from [ENA](https://www.ebi.ac.uk/ena/) and used in the annotation process. The long-read data are mapped to the genome using Minimap2 ([Li H., 2018](https://academic.oup.com/bioinformatics/article/34/18/3094/4994778)) with the recommended settings for Iso-Seq and Nanopore data. 
+Where available, long-read transcriptomic data (PacBio IsoSeq or Oxford Nanopore) are downloaded from [ENA](https://www.ebi.ac.uk/ena/) and used in the annotation process. The long-read data are mapped to the genome using Minimap2 ([Li H., 2018](https://doi.org/10.1093/bioinformatics/bty191)) with the recommended settings for Iso-Seq and Nanopore data.
 
 #### Validating Protein-coding Models
-Protein-coding models are validated by aligning the longest ORF against a database of eukaryotic UniProt proteins using Diamond ([Buchfink B., Reuter K., Drost HG., 2021](https://www.nature.com/articles/s41592-021-01101-x)). If the alignments are insufficient, additional validation is performed using RNASamba ([Camargo A.P., *et al*, 2020](https://academic.oup.com/nargab/article/2/1/lqz024/5701461)) and CPC2 ([Kang Y., 2017](https://academic.oup.com/nar/article/45/W1/W12/3831091)).
+Protein-coding models are validated by aligning the longest ORF against a database of eukaryotic UniProt proteins using Diamond ([Buchfink B., *et al.*, 2021](https://doi.org/10.1038/s41592-021-01101-x)). If the alignments are insufficient, additional validation is performed using RNASamba ([Camargo A.P., *et al*, 2020](https://doi.org/10.1093/nargab/lqz024)) and CPC2 ([Kang Y., *et al.*, 2017](https://doi.org/10.1093/nar/gkx428)).
 ### Model Generation Through Protein-to-Genome Alignments
 
-Protein sequences are downloaded from public databases and aligned to the genome in a splice-aware manner using GenBlast ([She, R., *et al*, 2011](https://academic.oup.com/bioinformatics/article/27/15/2141/403866)). The proteins aligned to the genome are selected subsets of [UniProt](https://www.uniprot.org/) ([The UniProt Consortium, 2017](https://doi.org/10.1093/nar/gkw1099)) and [OrthoDB](https://www.orthodb.org/) ([Kriventseva E.K., *et al*, 2019](https://doi.org/10.1093/nar/gky1053)) proteins, chosen to provide broad and targeted coverage of the species' proteome of interest.
+Protein sequences are downloaded from public databases and aligned to the genome in a splice-aware manner using GenBlast ([She, R., *et al*, 2011](https://doi.org/10.1093/bioinformatics/btr342)). The proteins aligned to the genome are selected subsets of [UniProt](https://www.uniprot.org/) ([The UniProt Consortium, 2017](https://doi.org/10.1093/nar/gkw1099)) and [OrthoDB](https://www.orthodb.org/) ([Kriventseva E.K., *et al*, 2019](https://doi.org/10.1093/nar/gky1053)) proteins, chosen to provide broad and targeted coverage of the species' proteome of interest.
 
 For GenBlast, a cut-off of 50% coverage and 30% identity, with an e-value threshold of e-1, is applied, and the exon repair option is enabled. The top 10 transcript models generated by GenBlast for each protein meeting these cut-offs are retained.
 
@@ -46,7 +46,7 @@ Stable identifiers are assigned to each gene, transcript, exon and translation. 
 
 ### Identifying Small Non-coding RNAs
 
-Small structured non-coding genes from [RFAM](https://rfam.org/) ([Nawrocki, E.P., et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25392425/)) and [miRBase](https://www.mirbase.org/) ([Griffiths-Jones, S., *et al.*, 2006](https://pubmed.ncbi.nlm.nih.gov/16381832/)) are analyzed using [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) ([Altschul, S.F., et al.,1990](https://pubmed.ncbi.nlm.nih.gov/2231712/)), and models are generated using the Infernal software suite ([Nawrocki, E.P. and S.R. Eddy, 2013](https://academic.oup.com/bioinformatics/article/29/22/2933/316439)).
+Small structured non-coding genes from [RFAM](https://rfam.org/) ([Nawrocki, E.P., *et al.*, 2015](https://doi.org/10.1093/nar/gku1063)) and [miRBase](https://www.mirbase.org/) ([Griffiths-Jones, S., *et al.*, 2006](https://doi.org/10.1093/nar/gkj112)) are analyzed using [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) ([Altschul, S.F., et al.,1990](https://doi.org/10.1016/s0022-2836(05)80360-2)), and models are generated using the Infernal software suite ([Nawrocki, E.P., and S.R. Eddy, 2013](https://doi.org/10.1093/bioinformatics/btt509)).
 ### Identifying Long Non-coding RNAs
 
 If a model fails to meet the criteria of any of the previously described categories, does not overlap a protein-coding gene, and has been constructed from transcriptomic data then it is considered as a potential lncRNA. Potential lncRNAs are additionally filtered to remove single-exon loci due to the unreliability of such models.
