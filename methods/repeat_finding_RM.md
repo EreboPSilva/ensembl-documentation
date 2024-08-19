@@ -1,3 +1,3 @@
-## Repeat Finding
+### Repeat Finding
 
 After the genomic sequence is loaded into a database, it is screened for sequence patterns, including repeats, using RepeatMasker [1], (version 4.0.5 with parameters -nolow -engine "RMBlast"), dustmasker ([Morgulis, A., *et al.*, 2006](https://doi.org/10.1089/cmb.2006.13.1028)) and TRF ([Benson, G., 1999](https://doi.org/10.1093/nar/27.2.573)). In addition to the Repbase ([Bao, W., *et al*, 2015](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-015-0041-9)) library, where available, a custom repeat library is used with RepeatMasker. Custom libraries are created using RepeatModeler2 ([Flynn, J.M., 2020](https://www.pnas.org/doi/10.1073/pnas.1921046117)) and can be downloaded via the [Ensembl FTP](https://ftp.ebi.ac.uk/pub/databases/ensembl/repeats/unfiltered_repeatmodeler/species/).
