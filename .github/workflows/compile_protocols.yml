@@ -40,7 +40,7 @@ jobs:
           methods/sncrnas.md \
           methods/pseudogenes.md \
           methods/lncrnas.md \
-          methods/appendix \
+          methods/appendix.md \
           > protocols/verts.md
 
         # Compile the "non_verts" protocol
@@ -55,7 +55,7 @@ jobs:
           methods/finalisation.md \
           methods/sncrnas.md \
           methods/lncrnas.md \
-          methods/appendix \
+          methods/appendix.md \
           > protocols/non_verts.md
 
         # Compile the "braker" protocol
