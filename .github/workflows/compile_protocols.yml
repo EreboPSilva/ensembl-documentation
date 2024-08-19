@@ -24,7 +24,7 @@ jobs:
     - name: Compile Protocols
       run: |
         # Create the "protocols" directory if it doesn't exist
-        # mkdir -p protocols
+        mkdir -p protocols
 
         # Compile the "verts" protocol
         cat \
