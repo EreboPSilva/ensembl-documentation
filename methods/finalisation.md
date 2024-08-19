@@ -1,4 +1,4 @@
-## Filtering Gene Models and Finalization of Gene Set
+## Filtering Gene Models and Finalisation of Gene Set
 
 ### Prioritising models at each locus
 
