@@ -70,5 +70,5 @@ jobs:
       run: |
         # Add the compiled protocols to the Git repo
         git add protocols/
-        git commit -m "Compile protocols"
+        git commit -m "Compile protocols [skip ci]"
         git push
