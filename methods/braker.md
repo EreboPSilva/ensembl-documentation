@@ -1,1 +1,7 @@
 ## Model Generation Through the BRAKER2 Annotation Pipeline
+
+[BRAKER2](https://github.com/Gaius-Augustus/BRAKER)([Bruna, T., *et. al* 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7787252/)) is one of the most popular tools for automatic eukaryotic genome annotation. This pipeline has been included in the Ensembl gene annotation process to generate supplementary gene annotation tracks for non-vertebrate species with an existing Ensembl annotation, or as a draft annotation for species without transcriptomic data, for more informaiton, see our [blog post](https://www.ensembl.info/2022/05/24/rapid-release-33-contains-species-annotated-via-braker2/).
+
+BRAKER2 includes [GeneMark-ES](https://genemark.bme.gatech.edu/)([Lomsadze, A., *et. al*, 2005](https://academic.oup.com/nar/article/33/20/6494/1082033)), a self-training algorithm for ab initio gene prediction, and [Augustus](https://bioinf.uni-greifswald.de/augustus/)([Stanke, M., *et. al*, 2006](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1538822/)), one of the most accurate gene prediction tools. The tool provides different options according to the available data. In the annotation process the pipeline is used in the default protein mode.
+
+The set of proteins have been downloaded from [UniProt](https://www.uniprot.org/) ([The UniProt Consortium, 2017](https://doi.org/10.1093/nar/gkw1099)) and [OrthoDB](https://www.orthodb.org/) ([Kriventseva E.K., *et al*, 2019](https://doi.org/10.1093/nar/gky1053)), using clade-specific filters.
