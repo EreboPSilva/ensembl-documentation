@@ -1,4 +1,4 @@
-## Model generation through alignment of transcriptomic data to the genome
+## Model Generation Through Alignment of Transcriptomic Data to the Genome
 
 ### Aligning RNASeq Data
 Where available, RNA-seq data are downloaded from [ENA](https://www.ebi.ac.uk/ena/) and utilised for annotation. The obtained reads are aligned to the genome using STAR ([Dobin A., *et al*, 2013](https://academic.oup.com/bioinformatics/article/29/1/15/272537?login=true)) and models assembled using Scallop ([Shao M., Kingsford C., 2017](https://www.nature.com/articles/nbt.4020)). 
