@@ -2,7 +2,7 @@
 
 ## Genome preparation
 
-The first phase of the Ensembl genome annotation pipeline involves loading an assembly into the Ensembl core database schema and then running a series of analyses on the loaded assembly to identify an initial set of genomic features.
+The genome preparation phase of the Ensembl genome annotation pipeline involves loading an assembly into an Ensembl core database schema and then running a series of analyses on the loaded assembly to identify an initial set of genomic features.
 
 ### Repeat Elements
 
