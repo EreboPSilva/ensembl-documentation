@@ -1,4 +1,4 @@
-## Filtering Gene Models and Finalisation of Gene Set
+## Filtering and Finalising Protein-coding Gene Models
 
 ### Prioritising models at each locus
 
