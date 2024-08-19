@@ -31,22 +31,22 @@ jobs:
           methods/genome_preparation.md \
           methods/repeat_finding_RM.md \
           methods/simple_features.md \
-	  methods/protein_coding.md \
-	  methods/transcriptomic.md \
+      	  methods/protein_coding.md \
+        	methods/transcriptomic.md \
           methods/homology.md \
           methods/projection.md \
-	  methods/pc_finalisation.md \
+      	  methods/pc_finalisation.md \
           methods/finalisation.md \
-	  methods/sncrnas.md \
+      	  methods/sncrnas.md \
           methods/pseudogenes.md \
-	  methods/lncrnas.md \
-	  methods/appendix \
+      	  methods/lncrnas.md \
+      	  methods/appendix \
           > protocols/verts.md
         
         # Compile the "non_verts" protocol
-	cat \
+      	cat \
        	  methods/genome_preparation.md \
-	  methods/repeat_finding_RED.md \
+      	  methods/repeat_finding_RED.md \
           methods/simple_features.md \
           methods/protein_coding.md \
           methods/transcriptomic.md \
@@ -59,11 +59,11 @@ jobs:
           > protocols/non_verts.md
         
         # Compile the "braker" protocol
-	cat \
+        cat \
        	  methods/genome_preparation.md \
-	  methods/repeat_finding_RM.md \
+      	  methods/repeat_finding_RM.md \
           methods/simple_features.md \
-	  methods/braker.md \
+      	  methods/braker.md \
           > protocols/braker.md
 
     - name: Sync!
