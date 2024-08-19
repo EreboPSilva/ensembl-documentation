@@ -1,3 +1,3 @@
 ### Pseudogenes
 
-Pseudogenes are annotated by looking for genes with evidence of frame-shifting or lying in repeat heavy regions. Single exon retro-transposed pseudogenes are identified by searching for a multi-exon equivalent elsewhere in the genome.  
+Models with hits to known proteins that also display abnormalities such as absence of a start codon, non-canonical splicing, unusually small intron structures (< 75bp) or excessive repeat coverage, are reclassified as pseudogenes. Single-exon models with a corresponding multi-exon copy elsewhere in the genome are classified as processed (retrotransposed) pseudogenes.
