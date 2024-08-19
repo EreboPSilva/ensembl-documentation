@@ -10,7 +10,7 @@ jobs:
 
   compile:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
       with:
@@ -20,33 +20,33 @@ jobs:
       run: |
         git config --global user.name 'EreboPSilva'
         git config --global user.email 'ereboperezsilva@ebi.ac.uk'
-    
+
     - name: Compile Protocols
       run: |
         # Create the "protocols" directory if it doesn't exist
         # mkdir -p protocols
-        
+
         # Compile the "verts" protocol
         cat \
           methods/genome_preparation.md \
           methods/repeat_finding_RM.md \
           methods/simple_features.md \
-      	  methods/protein_coding.md \
-        	methods/transcriptomic.md \
+          methods/protein_coding.md \
+          methods/transcriptomic.md \
           methods/homology.md \
           methods/projection.md \
-      	  methods/pc_finalisation.md \
+          methods/pc_finalisation.md \
           methods/finalisation.md \
-      	  methods/sncrnas.md \
+          methods/sncrnas.md \
           methods/pseudogenes.md \
-      	  methods/lncrnas.md \
-      	  methods/appendix \
+          methods/lncrnas.md \
+          methods/appendix \
           > protocols/verts.md
-        
+
         # Compile the "non_verts" protocol
-      	cat \
-       	  methods/genome_preparation.md \
-      	  methods/repeat_finding_RED.md \
+        cat \
+          methods/genome_preparation.md \
+          methods/repeat_finding_RED.md \
           methods/simple_features.md \
           methods/protein_coding.md \
           methods/transcriptomic.md \
@@ -57,13 +57,13 @@ jobs:
           methods/lncrnas.md \
           methods/appendix \
           > protocols/non_verts.md
-        
+
         # Compile the "braker" protocol
         cat \
-       	  methods/genome_preparation.md \
-      	  methods/repeat_finding_RM.md \
+          methods/genome_preparation.md \
+          methods/repeat_finding_RM.md \
           methods/simple_features.md \
-      	  methods/braker.md \
+          methods/braker.md \
           > protocols/braker.md
 
     - name: Sync!
